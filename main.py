@@ -1,4 +1,10 @@
-print("Hello, World!")
-print("こんにちは、世界！")
-print("Hola, Mundo!")
-print("Bonjour, le monde!")
+import random
+
+greetings = [
+    "Hello, World!",
+    "こんにちは、世界！",
+    "Hola, Mundo!",
+    "Bonjour, le monde!"
+]
+
+print(random.choice(greetings))
