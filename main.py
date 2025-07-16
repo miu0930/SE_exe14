@@ -2,23 +2,20 @@ import random
 import os
 
 greetings = [
-    "Hello, World!",
-    "こんにちは、世界！",
-    "Hola, Mundo!",
-    "Bonjour, le monde!"
+    "Greetings, human.",
+    "System online. Hello, World!",
+    "01001000 01100101 01101100 01101100 01101111!",
+    "🧠 Booting AI module... Hello!"
 ]
 
 print(random.choice(greetings))
 
-# 実行回数の記録
+# 実行回数を記録（前と同じ）
 count_file = "count.txt"
-
-# ファイルが存在していなければ初期化
 if not os.path.exists(count_file):
     with open(count_file, "w") as f:
         f.write("0")
 
-# 実行回数を読み取り、+1して保存
 with open(count_file, "r") as f:
     count = int(f.read())
 
@@ -27,4 +24,4 @@ count += 1
 with open(count_file, "w") as f:
     f.write(str(count))
 
-print(f"Executed {count} times.")
+print(f"Execution number: {count}. All systems nominal.")
